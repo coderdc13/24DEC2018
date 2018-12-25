@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <h2>
+            Choose How You Will Succeed
+        </h2>
+        <p>
+            In the dropdown menu, choose how you will DOMINATE...
+        </p>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+            Domination Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#completely">Completely</a>
+                <a href="#thoroughly">Thoroughly</a>
+                <a href="#comprehensively">Comprehensively</a>
+            </div>
+        </div>
+        <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
